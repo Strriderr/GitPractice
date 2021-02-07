@@ -12,7 +12,7 @@ sword = False
 
 
 def room_1():
-    print("You are in a big room with blood covered walls.")
+    print("You are in a large room with blood covered walls.")
     print("It's really dark and all you can see is three doors.")
     print("They lead east, north and west. What do you do?")
 
@@ -24,8 +24,8 @@ def room_1():
         room_4()
     elif "east" in choice:
         game_over("""You carefully go through the narrow passage heading
-east. After walking for three minutes, you see that
-it ends with a solid wall. You turn around to get back
+east. After walking for a few minutes, you see that
+it ends with a solid wall. You turn around try and return
 but you find yourself facing another wall. Somewhat,
 you have trapped yourself. Without water nor food, you
 die some days later.""")
@@ -39,8 +39,8 @@ die some days later.""")
 def room_2():
     print("This room has a really low ceiling and you must crouch to walk.")
     print("You see a passage leading west and a passage leading north.")
-    print("On the far end of the first one, you can see a bright light.")
-    print("From the second one, a really bad smell emanates.")
+    print("To the west path, you can see a bright light.")
+    print("From the north path, a really bad smell emanates.")
     print("The passage to the east leads to the first room.")
     print("What do you do?")
 
@@ -88,9 +88,9 @@ def room_3():
         if "east" in choice:
             game_over("""As you run towards the east passage, the beast leaps
 in front of you. You don't have the time to do anything,
-because the beast opens its jaws and rips of your head.""")
+because the beast opens its jaws and devouring your cranium in one bite.""")
         elif "torch" in choice:
-            print("""You take the flaming torch and wave it in front of the
+            print("""You pick up the flaming torch and wave it in front of the
 beast. It leaps back in fear, stumbles and falls in the
 hole, disappearing from the room.""")
             beast_alive = False
@@ -126,7 +126,7 @@ falling.""")
         if "east" in choice:
             room_4()
         elif "torch" in choice:
-            print("""You take the flaming torch and wave it in the air.
+            print("""You pick up the flaming torch and wave it in the air.
 You feel stupid and put it down.""")
             room_3()
         elif "sword" in choice:
@@ -154,14 +154,14 @@ def room_4():
     if dragon_alive:
 
         print(
-            "The room is huge, and for a good reasons. It is the home of a dragon."
+            "The room is huge, and for a good reasons. It is the home of a terrifying dragon."
         )
 
         if sword:
             print(
-                """Suddenly your sword starts to glow. Un uknown force urges you to
-leap forward and drive the sword in the heart of the dragons.
-It dies with horrible screams.""")
+                """Suddenly your sword starts to glow. An uknown force urges you to
+leap forward and drive the sword in the heart of the dragon.
+It dies with a horrifying scream.""")
             dragon_alive = False
             room_4()
         else:
@@ -171,7 +171,7 @@ It dies with horrible screams.""")
 
         choice = str(input("> "))
 
-        game_over("The dragon leaps in front of you and roasts you alive.")
+        game_over("The dragon leaps in front of you, breathing fire, roasting you alive.")
 
     else:
 
